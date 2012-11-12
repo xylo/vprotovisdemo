@@ -111,7 +111,7 @@ public class DimensionPanel implements Page {
         this.marginRightText.addValidator(doubleValidator);
         this.marginRightText.setImmediate(true);
         
-        this.lineWidthText.addValidator(new IntegerValidator("Value must be an integer"));
+        this.lineWidthText.addValidator(new DoubleValidator("Value must be a decimal number"));
         this.lineWidthText.setImmediate(true);
     }
     
@@ -167,7 +167,7 @@ public class DimensionPanel implements Page {
         return this.marginBottomText.getValue().equals("") ? null : Double.valueOf((String) this.marginBottomText.getValue());
     }
     
-    public Integer getLineWidth() {
-        return this.lineWidthText.getValue().equals("") ? null : Integer.valueOf((String) this.lineWidthText.getValue());
+    public Double getLineWidth() {
+        return this.lineWidthText.getValue().equals("") ? null : Double.valueOf((String) this.lineWidthText.getValue());
     }
 }

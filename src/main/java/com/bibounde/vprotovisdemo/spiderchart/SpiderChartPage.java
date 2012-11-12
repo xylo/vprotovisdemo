@@ -176,7 +176,7 @@ public class SpiderChartPage implements Page {
             chart.setMarginBottom(10d);
         }
 
-        Integer lineWidth = this.dimensionPanel.getLineWidth();
+        Double lineWidth = this.dimensionPanel.getLineWidth();
         if (lineWidth != null) {
             chart.setLineWidth(lineWidth);
             this.sourceCodeMap.put("lineWidth", lineWidth);

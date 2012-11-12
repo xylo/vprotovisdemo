@@ -138,7 +138,7 @@ public class DimensionPanel implements Page {
         this.highlightOffsetText.addValidator(doubleValidator);
         this.highlightOffsetText.setImmediate(true);
         
-        this.lineWidthText.addValidator(new IntegerValidator("Value must be an integer"));
+  	    this.lineWidthText.addValidator(new DoubleValidator("Value must be a decimal number"));
         this.lineWidthText.setImmediate(true);
         this.lineColorText.addValidator(new ColorValidator());
         this.lineColorText.setImmediate(true);
@@ -203,8 +203,8 @@ public class DimensionPanel implements Page {
         return this.highlightOffsetText.getValue().equals("") ? null : Double.valueOf((String) this.highlightOffsetText.getValue());
     }
     
-    public Integer getLineWidth() {
-        return this.lineWidthText.getValue().equals("") ? null : Integer.valueOf((String) this.lineWidthText.getValue());
+    public Double getLineWidth() {
+        return this.lineWidthText.getValue().equals("") ? null : Double.valueOf((String) this.lineWidthText.getValue());
     }
     
     public String getLineColor() {
